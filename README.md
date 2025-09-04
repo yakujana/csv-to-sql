@@ -1,2 +1,1 @@
-# csv-to-sql
-First Project
+# CSV-to-SQL Loader
