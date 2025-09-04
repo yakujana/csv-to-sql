@@ -1,13 +1,13 @@
 import typer
-from .loader import load_csv_to_sqlite
+from csv_to_sql.loader import load_csv_to_sqlite
 
 app = typer.Typer()
 
 @app.command()
 def load(
-    csv_file: str,  # positional argument
-    db_file: str = "data.db",  # option with default
-    table_name: str = "my_table"  # option with default
+    csv_file: str = typer.Option(..., "--csv-file", "-c", help="Path to CSV file"),
+    db_file: str = typer.Option("data.db", "--db-file", "-d", help="SQLite DB file"),
+    table_name: str = typer.Option("my_table", "--table-name", "-t", help="Table name")
 ):
     """
     Load a CSV file into a SQLite database.
