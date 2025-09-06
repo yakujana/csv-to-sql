@@ -15,7 +15,12 @@ def load(
     result = load_csv_to_sqlite(csv_file, db_file, table_name)
     typer.echo(result)
 
+<<<<<<< HEAD
 
 
 
+=======
+if __name__ == "__main__":
+    app()
+>>>>>>> 9c7220b464b3be1a6baae8bbed0f63f8d7f6bbeb
 
